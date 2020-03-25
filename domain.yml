@@ -1,0 +1,54 @@
+intents:
+  - greet
+  - enter_digit
+  - affirm
+  - deny
+  - cat
+  - dog
+  - pig
+  - rooster
+  - cow
+
+actions:
+  - utter_greet
+  - action_reset_score
+  - utter_cat
+  - utter_pig
+  - utter_dog
+  - utter_rooster
+  - utter_cow
+  - utter_choose_game
+  - action_choose_game
+  - utter_instruction
+  - action_evaluate_answer
+  - action_evaluate_score
+  - action_meow_yum_yuck
+
+templates:
+  utter_greet:
+  - text: "Hi! I'm Onomatic. Wanna play a game?"
+
+  utter_choose_game:
+  - text: "Choose (1) give a sound, or (2) guess a sound. Enter a digit corresponding to your choice." 
+
+  utter_instruction:
+  - text: "Write an animal sound in your language (pig, dog, cow, cat, or rooster), and I will try to guess it."  
+
+  utter_pig:
+  - text: "Is it the sound of a pig?"
+
+  utter_dog:
+  - text: "Is it the sound of a dog?"
+
+  utter_cat:
+  - text: "Is is the sound of a cat?"
+
+  utter_rooster:
+  - text: "Is it the sound of a rooster?"
+
+  utter_cow:
+  - text: "Is it the sound of a cow?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
