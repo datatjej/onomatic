@@ -90,7 +90,7 @@ class EvaluateAnswer(Action):
 
         dispatcher.utter_message(text="Bot: " + str(bot_score) + ", You: " + str(user_score))
 
-        if(user_score < 3 or bot_score < 3):
+        if(user_score < 3 and bot_score < 3):
             dispatcher.utter_message(text="Here's another one:")
             return [FollowupAction('action_meow_yum_yuck')]
         elif(user_score > 2):
@@ -133,7 +133,7 @@ class UpdateScore(Action):
         
         dispatcher.utter_message(text="Bot: " + str(bot_score) + ", You: " + str(user_score))
         
-        if(user_score < 3 or bot_score < 3): 
+        if(user_score < 3 and bot_score < 3): 
             dispatcher.utter_message(text="Give me another one.")
         elif(user_score > 2):
             dispatcher.utter_message(text="Congratulations, you won!")
